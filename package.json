@@ -1,0 +1,17 @@
+{
+  "name": "flurry",
+  "version": "0.0.1-4",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "3.0.0rc4",
+    "ejs": "*",
+    "sass": "*"
+  },
+  "subdomain": "kenniyu.flurry",
+  "engines": {
+    "node": "0.8.x"
+  }
+}

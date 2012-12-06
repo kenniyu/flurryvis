@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Active/Total Users Over Time</title>
+    <link rel='stylesheet' href='stylesheets/style.css' />
+
+    <script src="javascripts/jquery.min.js"></script>
+    <script src="http://d3js.org/d3.v3.js"></script>
+    <script type="text/javascript" src="javascripts/jquery.tipsy.js"></script>
+    <script type="text/javascript" src="javascripts/flurry_graph.js"></script>
+    <script type="text/javascript" src="javascripts/flurry.js"></script>
+  </head>
+
+  <body class="gradient">
+
+    <div class="container">
+      <ul class="vis-options">
+        <li class="option">
+          <a href="#" id="all-data">All</a>
+        </li>
+        <li class="option">
+          <a href="#" id="active-user-ratio">Active User Ratio</a>
+        </li>
+        <li class="option">
+          <a href="#" id="active-total-users">Total & Active Users</a>
+        </li>
+      </ul>
+
+
+      <div class="content">
+        <div class="svg-container">
+          <div id="all-data-chart-wrapper">
+            <div class="chart inactive" id="all-data-chart"></div>
+          </div>
+          <div class="chart inactive" id="active-user-ratio-chart"></div>
+          <div class="chart inactive" id="active-total-users-chart"></div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+
+
+</html>

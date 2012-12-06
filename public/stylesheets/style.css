@@ -1,0 +1,339 @@
+html {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background: #000 url(/images/dvsup.png);
+}
+
+body {
+  text-shadow: 0 -1px 1px #000;
+  font: 13px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #ccc;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #FAE6C8;
+  text-shadow: 0 -1px 0 #999;
+}
+
+.container {
+  overflow: hidden;
+  margin: auto;
+  width: 960px;
+  text-align: center;
+}
+
+.container ul.vis-options {
+  list-style-type: none;
+  display: inline-block;
+
+  padding: 0;
+  margin: 10px 0 5px 0;
+
+  overflow: hidden;
+  text-align: center;
+
+  border: 1px solid #666;
+  padding: 5px;
+  background: #444;
+
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+
+  -moz-box-shadow: inset 1px 2px 4px #222;
+  -webkit-box-shadow: inset 1px 2px 4px #222;
+  box-shadow: inset 1px 2px 4px #222;
+}
+
+.container ul.vis-options li {
+  float: left;
+  border: 1px solid #666;
+  -moz-box-shadow: 1px 2px 4px #222;
+  -webkit-box-shadow: 1px 2px 4px #222;
+  box-shadow: 1px 2px 4px #222;
+  border-right: 0;
+
+  background: rgb(69,72,77); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(69,72,77,1) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(69,72,77,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+
+}
+
+.container ul.vis-options li:active, .container ul.vis-options li.selected {
+  background: rgb(0,0,0); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(0,0,0,1) 0%, rgba(69,72,77,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,1)), color-stop(100%,rgba(69,72,77,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(69,72,77,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(69,72,77,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(69,72,77,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(0,0,0,1) 0%,rgba(69,72,77,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#45484d',GradientType=0 ); /* IE6-9 */
+}
+
+
+.container ul.vis-options li:first-child {
+  -webkit-border-radius: 5px 0 0 5px;
+  -moz-border-radius: 5px 0 0 5px;
+  border-radius: 5px 0 0 5px;
+}
+
+.container ul.vis-options li:last-child {
+  -webkit-border-radius: 0 5px 5px 0;
+  -moz-border-radius: 0 5px 5px 0;
+  border-radius: 0 5px 5px 0;
+}
+
+.container ul.vis-options a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 50px;
+}
+
+.container .vis-options a:hover {
+  text-decoration: underline;
+}
+
+.container .content {
+}
+
+
+.svg-container .chart {
+
+  border-top: 0;
+}
+
+.svg-container .chart.inactive {
+  display: none;
+}
+
+.svg-container .chart h2.graph-heading {
+  text-align: center;
+  color: #FAE6C8;
+
+
+  background: rgb(69,72,77); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(69,72,77,1) 0%, rgba(0,0,0,1) 66%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(69,72,77,1)), color-stop(66%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 66%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 66%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 66%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 66%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+
+  margin: 10px 0 0 0;
+  padding: 15px 0;
+
+  -webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+
+  -moz-box-shadow: 0 2px 2px #333;
+  -webkit-box-shadow: 0 2px 2px #333;
+  box-shadow: 0 2px 2px #333;
+}
+
+.svg-container .chart#all-data-chart .chart-module {
+  display: inline-block;
+}
+
+.svg-container .chart#all-data-chart .chart-module h2.graph-heading {
+  padding: 10px 0;
+  font-size: 15px;
+}
+
+.svg-container .chart svg {
+  margin: 0 auto 10px auto;
+  display: block;
+
+  -moz-box-shadow: inset 0 0 2px #666;
+  -webkit-box-shadow: inset 0 0px 2px #666;
+  box-shadow: inset 0 0px 2px #666;
+
+  -webkit-border-radius: 0 0 5px 5px;
+  -moz-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
+
+}
+
+.svg-container .chart .no-data {
+  font-size: 24px;
+  text-transform: uppercase;
+  padding: 100px;
+  font-weight: bold;
+  background: rgba(200, 200, 200, 0.1);
+}
+
+/* svg */
+
+svg circle {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+svg circle.total {
+  fill: rgba(158, 218, 229, 0.5);
+  stroke: rgba(158, 218, 229, 1);
+}
+
+svg circle.active {
+  fill: rgba(152, 223, 138, 0.5);
+  stroke: rgba(152, 223, 138, 1);
+}
+
+svg circle:hover {
+  opacity: 1;
+}
+
+svg rect.active {
+  opacity: 0.75;
+  cursor: pointer;
+}
+
+svg rect.active:hover {
+  opacity: 1;
+}
+
+svg line.rule {
+  stroke: rgba(255, 255, 255, 0.1);
+  fill: none;
+  shape-rendering: crispEdges;
+}
+
+svg .caption {
+  font-size: 10px;
+  fill: #FAE6C8;
+}
+
+svg text {
+  stroke: none;
+  fill: #fff;
+}
+
+svg .axis .axis-label {
+  fill: #ccc;
+  font-size: 13px;
+}
+
+.axis .x-axis {
+  stroke: #aaa;
+}
+
+.axis {
+  font-size: 11px;
+  fill: none;
+  stroke: #999;
+  shape-rendering: crispEdges;
+}
+
+.axis path {
+  display: none;
+}
+
+.axis line {
+  stroke: #999;
+}
+
+.axis text {
+  fill: #999;
+  stroke: none;
+  shape-rendering: crispEdges;
+}
+
+.active-total-users-line path.total-users {
+  stroke: rgba(158, 218, 229, 0.5);
+  fill: none;
+}
+
+.active-total-users-line path.active-users {
+  stroke: rgba(152, 223, 138, 0.5);
+  fill: none;
+}
+
+
+.legend text {
+  stroke: none;
+  shape-rendering: crispEdges;
+  font-size: 11px;
+  fill: #ccc;
+}
+
+rect.heatmap.legend {
+  fill: rgb(205,38,38); /* Old browsers */
+  background: -moz-linear-gradient(left,  rgba(205,38,38,1) 0%, rgba(255,202,22,1) 50%, rgba(76,187,23,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(205,38,38,1)), color-stop(50%,rgba(255,202,22,1)), color-stop(100%,rgba(76,187,23,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  rgba(205,38,38,1) 0%,rgba(255,202,22,1) 50%,rgba(76,187,23,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  rgba(205,38,38,1) 0%,rgba(255,202,22,1) 50%,rgba(76,187,23,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  rgba(205,38,38,1) 0%,rgba(255,202,22,1) 50%,rgba(76,187,23,1) 100%); /* IE10+ */
+  background: linear-gradient(to right,  rgba(205,38,38,1) 0%,rgba(255,202,22,1) 50%,rgba(76,187,23,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cd2626', endColorstr='#4cbb17',GradientType=1 ); /* IE6-9 */
+}
+
+/* tipsy */
+.tipsy { font-size: 12px; position: absolute; padding: 5px; z-index: 100000; }
+.tipsy-inner { background-color: #000; color: #FFF; max-width: 200px; padding: 5px 4px 4px 4px; text-align: center; }
+
+/* Rounded corners */
+.tipsy-inner { border-radius: 8px; -moz-border-radius: 8px; -webkit-border-radius: 8px; box-shadow: 0 0 5px #fff; -webkit-box-shadow: 0 0 5px #fff; -moz-box-shadow: 0 0 5px #fff; }
+.tipsy-inner .date { color: #ccc; font-weight: bold; font-size: 14px; padding: 6px 0 0 0; margin: 0}
+
+.tipsy-inner .stats {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 45%;
+  padding: 0 5px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.tipsy-inner .stats p {
+  padding: 2px 0;
+  margin: 0;
+}
+
+.tipsy-inner .stats .label {
+  color: #FAE6C8;
+}
+
+.tipsy-inner .stats .value {
+}
+
+.tipsy-inner .stats.active-users {
+  color: rgb(152, 223, 138);
+}
+
+.tipsy-inner .stats.total-users {
+  color: rgb(158, 218, 229);
+}
+
+.tipsy-inner .active-user-ratio {
+  width: 90%;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.tipsy-arrow { position: absolute; width: 0; height: 0; line-height: 0; border: 5px dashed #000; }
+
+/* Rules to colour arrows */
+.tipsy-arrow-n { border-bottom-color: #000; }
+.tipsy-arrow-s { border-top-color: #000; }
+.tipsy-arrow-e { border-left-color: #000; }
+.tipsy-arrow-w { border-right-color: #000; }
+
+.tipsy-n .tipsy-arrow { top: 0px; left: 50%; margin-left: -5px; border-bottom-style: solid; border-top: none; border-left-color: transparent; border-right-color: transparent; }
+.tipsy-nw .tipsy-arrow { top: 0; left: 10px; border-bottom-style: solid; border-top: none; border-left-color: transparent; border-right-color: transparent;}
+.tipsy-ne .tipsy-arrow { top: 0; right: 10px; border-bottom-style: solid; border-top: none;  border-left-color: transparent; border-right-color: transparent;}
+.tipsy-s .tipsy-arrow { bottom: 0; left: 50%; margin-left: -5px; border-top-style: solid; border-bottom: none;  border-left-color: transparent; border-right-color: transparent; }
+.tipsy-sw .tipsy-arrow { bottom: 0; left: 10px; border-top-style: solid; border-bottom: none;  border-left-color: transparent; border-right-color: transparent; }
+.tipsy-se .tipsy-arrow { bottom: 0; right: 10px; border-top-style: solid; border-bottom: none; border-left-color: transparent; border-right-color: transparent; }
+.tipsy-e .tipsy-arrow { right: 0; top: 50%; margin-top: -5px; border-left-style: solid; border-right: none; border-top-color: transparent; border-bottom-color: transparent; }
+.tipsy-w .tipsy-arrow { left: 0; top: 50%; margin-top: -5px; border-right-style: solid; border-left: none; border-top-color: transparent; border-bottom-color: transparent; }
