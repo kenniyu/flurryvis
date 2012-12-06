@@ -3,11 +3,8 @@ This node app visualizes the active user ratio data for a particular app tracked
 To run (assuming you have npm):
 
 1. Clone this repo.
-
 2. cd into the directory, then run 'npm install' (to install all dependencies).
-
 3. Start the server by running 'node app.js' in the directory.
-
 4. Open up browser and access localhost:3000.
 
 
