@@ -404,7 +404,28 @@ var FlurryGraph = function(metricKey) {
     // axis labels
     // generateAxisLabels(svg, chartWidth, chartHeight, 'date', 'active user ratio');
 
-    var heatmapGradient = svg.append('svg:defs')
+    // add heatmap legend
+    generateHeatmapLegend(svg, chartPadding, chartHeight);
+
+    // caption
+    generateCaption(svg, svgWidth, svgHeight, activeUserRatioData, chartPadding);
+
+    // add lines for better reading
+    svg.selectAll('.rule')
+      .data(y.ticks(10))
+      .enter().append('line')
+        .attr('class', 'rule')
+        .attr('y1', function(d) { return y(d); })
+        .attr('y2', function(d) { return y(d); })
+        .attr('x1', 0)
+        .attr('x2', chartWidth + barWidth);
+
+    instantiateTipsy('svg rect.active', 'w');
+  }
+
+  /* Generates the heatmap legend */
+  function generateHeatmapLegend(chart, chartPadding, chartHeight) {
+    var heatmapGradient = chart.append('svg:defs')
       .append('svg:linearGradient')
       .attr('id', 'gradient')
       .attr('x1', '0%')
@@ -428,7 +449,7 @@ var FlurryGraph = function(metricKey) {
       .attr('stop-color', 'rgb(76, 187, 23)')
       .attr('stop-opacity', 0.75);
 
-    var heatmapLegend = svg.append('g')
+    var heatmapLegend = chart.append('g')
       .attr('class', 'heatmap legend')
       .attr('transform', 'translate(' + (chartPadding['left'] - 30) + ',' + (chartHeight + 30) + ')');
 
@@ -451,20 +472,6 @@ var FlurryGraph = function(metricKey) {
       .attr('y', 7)
       .attr('text-anchor', 'start')
       .text('100%');
-    // caption
-    generateCaption(svg, svgWidth, svgHeight, activeUserRatioData, chartPadding);
-
-    // add lines for better reading
-    svg.selectAll('.rule')
-      .data(y.ticks(10))
-      .enter().append('line')
-        .attr('class', 'rule')
-        .attr('y1', function(d) { return y(d); })
-        .attr('y2', function(d) { return y(d); })
-        .attr('x1', 0)
-        .attr('x2', chartWidth + barWidth);
-
-    instantiateTipsy('svg rect.active', 'w');
   }
 
   /* Returns an rgb string based on active user ratio data */
