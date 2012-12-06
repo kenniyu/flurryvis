@@ -17,3 +17,5 @@ jQuery.tipsy (example with code: http://bl.ocks.org/1373263)
 
 Why node?
 Just to keep future opportunities open.  For example, with node, clients can view their dashboards in real time. The server can make a POST request to the Flurry API, get the data, and update the client side (not yet implemented)
+
+The server is up for view (using provided sample data) at http://kenniyu.flurry.jit.su/
